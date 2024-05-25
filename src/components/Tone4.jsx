@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 const notes = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4'];
 
+const sampler1 = new Tone.Sampler({
+  urls: {
+
 const synth1 = new Tone.Synth().toDestination();
 
 const synth2 = new Tone.Synth();
@@ -12,8 +15,8 @@ const feedbackDelay = new Tone.FeedbackDelay({
   delayTime: 0.1,
   maxDelay: 2.5,
   feedback: 0.8,
-  wet: 0.3, 
-})
+  wet: 0.3,
+});
 
 synth2.connect(feedbackDelay);
 feedbackDelay.toDestination();

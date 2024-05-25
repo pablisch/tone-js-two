@@ -43,8 +43,6 @@ const ToneButton2 = ({ note }) => {
     if (checkState()) synth.triggerAttackRelease(note, "8n");
   }
 
-
-
   return (
     <button className='btn tone-btn' onClick={() => handlePlayNote(note)} onMouseEnter={ () => handlePlayNote(note)}>{`Play ${note}`}</button>
   )
