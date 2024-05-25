@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.main {
+  padding: 30px;
+}
+
+.btn {
+  padding: 5px;
+  margin: 5px;
+}
+
+.start-btn {
+  display: block;
+  padding: 5px;
+  margin-bottom: 25px;
+}
+
+.tone-btn {
+  padding: 15px 10px;
+}
+
+.active-btn {
+  background-color: #c3ff95;
+}
