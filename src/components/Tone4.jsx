@@ -2,10 +2,27 @@ import * as Tone from 'tone';
 import { useState } from 'react';
 import PropTypes from 'prop-types';
 
-const notes = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4'];
-
 const sampler1 = new Tone.Sampler({
   urls: {
+    A1: 'doublebass_marc_a1.mp3',
+    C1: 'doublebass_marc_c1.mp3',
+    D1: 'doublebass_marc_d1.mp3',
+    E1: 'doublebass_marc_e1.mp3',
+    G1: 'doublebass_marc_g1.mp3',
+    A2: 'doublebass_marc_a2.mp3',
+    C2: 'doublebass_marc_c2.mp3',
+    D2: 'doublebass_marc_d2.mp3',
+    E2: 'doublebass_marc_e2.mp3',
+    G2: 'doublebass_marc_g2.mp3',
+  },
+  baseUrl: '/samples/doublebass_marc_samples/',
+  onload: () => {
+    sampler1.triggerAttackRelease(["C2"], 0.5);
+  }
+}).toDestination();
+
+const notes = ['A1', 'C1', 'D1', 'E1', 'G1', 'A2', 'C2', 'D2', 'E2', 'G2'];
+
 
 const synth1 = new Tone.Synth().toDestination();
 
